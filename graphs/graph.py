@@ -19,5 +19,11 @@ class Graph:
     while start:
       current_vertex = start.pop(0)
       print("Current Vertex: " + current_vertex)
+      if current_vertex == end_vertex:
+        return True
+      vertex = self.graph_dict[current_vertex]
+      next_vertices = vertex.get_edges()
+      start += next_vertices
+    return False
 
     
