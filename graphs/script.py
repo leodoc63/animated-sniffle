@@ -1,21 +1,21 @@
 from graph import Graph
 from vertex import Vertex
 
-railway = Graph()
+undirected_railway = Graph()
 
-callan = Vertex('callan')
-peel = Vertex('peel')
-harwick = Vertex('harwick')
+callan_station = Vertex('callan')
+peel_station = Vertex('peel')
+ulfstead_station = Vertex('ulfstead')
+harwick_station = Vertex('harwick')
 
-railway.add_vertex(callan)
-railway.add_vertex(peel)
-railway.add_vertex(harwick)
+undirected_railway.add_vertex(callan_station)
+undirected_railway.add_vertex(peel_station)
+undirected_railway.add_vertex(harwick_station)
+undirected_railway.add_vertex(ulfstead_station)
 
-railway.add_edge(callan, peel, 12)
-railway.add_edge(harwick, callan, 7)
-railway.add_edge(peel, harwick)
+undirected_railway.add_edge(peel_station, harwick_station)
+undirected_railway.add_edge(peel_station, callan_station)
 
-print(callan.edges)
-print(harwick.edges)
-print(peel.edges)
+
+undirected_railway.find_path('harwick', 'callan')
 
