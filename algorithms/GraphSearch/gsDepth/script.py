@@ -5,4 +5,5 @@ def dfs(graph, current_vertex, target_value, visited = None):
     visited.append(current_vertex)
     return visited
 
-print(dfs(None, "Bees?", None))
+    if current_vertex == target_value:
+        return visited
